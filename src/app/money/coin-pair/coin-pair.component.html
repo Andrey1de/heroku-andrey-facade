@@ -1,0 +1,26 @@
+
+<div class="my-table-view container"> 
+
+    <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Pair</th>
+            <th scope="col">From</th>
+            <th scope="col">To</th>
+            <th scope="col">Ratio</th>
+            <th scope="col">Updated</th>
+           </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let pair of data.CoinPairs">
+            <th scope="row">{{pair.pair}}</th>
+            <td>{{pair.ratio.toString().substr(0,7)}}</td>
+            <td>{{pair.from.country}}</td>
+            <td>{{pair.to.country}}</td>
+            <td>{{pair.updatedStr()}}</td> 
+          </tbody>
+      </table>
+   <br>
+   {{data.envPairs}}
+      
+</div>
